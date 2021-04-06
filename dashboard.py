@@ -1,10 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import gettext
+_ = gettext.gettext
 
 from zenserp import Client
 
-apikey = st.sidebar.text_input('Enter API key', type='password')
+apikey = st.sidebar.text_input(_('Enter API key'), type='password')
 
 client = Client(apikey)
 
@@ -29,20 +31,13 @@ def get_table_download_link(df, label='table'):
     return f'<a class="streamlit-button small-button primary-button" href="data:application/octet-stream;base64,{b64.decode()}" download="extract.xlsx">🗒️ Download {label} as xlsx file</a>'
 
 if(apikey == ""):
-    st.markdown(''' 
-# Keyword Icebreaker
-## This app uses Zenserp API
-To use it, you must enter your own API key. Create account: [https://zenserp.com/](https://zenserp.com/)
-
-Demo:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3xAl9ktbQGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Article about it: [Keyword Monitoring Tool: Track your competition in search results](https://medium.datadriveninvestor.com/keyword-monitoring-tool-track-your-competition-in-search-results-83db61f0a696)
-
-It is NOT official app. We don't save this data anywhere, but if you want to feel safe, you can run the application on your own computer: [https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093](https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093) 
-            
-            ''',unsafe_allow_html=True)
+    st.markdown('# Keyword Icebreaker')
+    st.markdown(_('## This app uses Zenserp API'))
+    st.markdown(_('To use it, you must enter your own API key. Create account: [https://zenserp.com/](https://zenserp.com/)'))
+    st.markdown(_('Demo:'))
+    st.markdown('<iframe width="560" height="315" src="https://www.youtube.com/embed/3xAl9ktbQGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', unsafe_allow_html=True)
+    st.markdown(_('Article about it: [Keyword Monitoring Tool: Track your competition in search results](https://medium.datadriveninvestor.com/keyword-monitoring-tool-track-your-competition-in-search-results-83db61f0a696)'))
+    st.markdown(_('It is NOT official app. We don\'t save this data anywhere, but if you want to feel safe, you can run the application on your own computer: [https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093](https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093) '))
     st.stop()
 
 params = {
@@ -56,45 +51,45 @@ st.markdown(f"Remaining requests: **{status['remaining_requests']}**")
 
 search_engines = client.search_engines()
 params['search_engine'] = st.sidebar.selectbox(
-    "Select search_engine domain",
+    _("Select search_engine domain"),
     search_engines,
     search_engines.index("google.com")
 )
 
-if st.sidebar.checkbox('Advanced settings'):
-    params["location"] = st.sidebar.selectbox("The geolocation used in the query", [""]+client.locations())
+if st.sidebar.checkbox(_('Advanced settings')):
+    params["location"] = st.sidebar.selectbox(_("The geolocation used in the query"), [""]+client.locations())
     hl = client.hl()
     codes = list(map(lambda x: x['code'], hl))
     names = list(map(lambda x: x['name'], hl))
-    params["hl"] = st.sidebar.selectbox("Web Interface Language, autodetected from the search_engine if not supplied", [""]+codes, 0,key=names)
+    params["hl"] = st.sidebar.selectbox(_("Web Interface Language, autodetected from the search_engine if not supplied"), [""]+codes, 0,key=names)
 
     gl = client.gl()
     codes = list(map(lambda x: x['code'], gl))
     names = list(map(lambda x: x['name'], gl))
-    params["gl"] = st.sidebar.selectbox("Googles country code, autodetected from the search_engine if not supplied", [""]+codes, 0,key=names)
+    params["gl"] = st.sidebar.selectbox(_("Googles country code, autodetected from the search_engine if not supplied"), [""]+codes, 0,key=names)
 
     params["num"] = st.sidebar.number_input("num", value=10)
 
     params['device'] = st.sidebar.radio(
-        "Which device to use: desktop or mobile",
+        _("Which device to use: desktop or mobile"),
         ['desktop', 'mobile']
     )
 
-params['q'] = st.text_input('Search Query')
+params['q'] = st.text_input(_('Search Query'))
 
-if st.checkbox('Show raw request'):
+if st.checkbox(_('Show raw request')):
     st.write(params)
 
-st.subheader('Settings')
-options = st.multiselect('Select part of results page', ['paid', 'organic', 'related_searches','knowledge_graph','questions','images'])
-show_raw_results = st.checkbox('Show raw results')
+st.subheader(_('Settings'))
+options = st.multiselect(_('Select part of results page'), ['paid', 'organic', 'related_searches','knowledge_graph','questions','images'])
+show_raw_results = st.checkbox(_('Show raw results'))
 
-def display_table(df, label='table'):
+def display_table(df, label=_('table')):
     st.subheader(label)
     st.write(df)
     st.markdown(get_table_download_link(df, label), unsafe_allow_html=True)
 
-if st.button('🔍 Search'):
+if st.button(_('🔍 Search')):
     import copy
     raw_results = get_results(client, params)
     results = copy.deepcopy(raw_results)
