@@ -6,6 +6,14 @@ _ = gettext.gettext
 
 from zenserp import Client
 
+language = st.sidebar.selectbox('', ['en', 'pl', 'de'])
+try:
+  localizator = gettext.translation('base', localedir='locales', languages=[language])
+  localizator.install()
+  _ = localizator.gettext 
+except:
+    pass
+
 apikey = st.sidebar.text_input(_('Enter API key'), type='password')
 
 client = Client(apikey)

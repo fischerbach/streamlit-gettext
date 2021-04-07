@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-04-06 08:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: dashboard.py:9
+msgid "Enter API key"
+msgstr "API-Schlüssel eingeben"
+
+#: dashboard.py:35
+msgid "## This app uses Zenserp API"
+msgstr "## Diese App verwendet die Zenserp API"
+
+#: dashboard.py:36
+msgid "To use it, you must enter your own API key. Create account: [https://zenserp.com/](https://zenserp.com/)"
+msgstr ""
+
+#: dashboard.py:37
+msgid "Demo:"
+msgstr ""
+
+#: dashboard.py:39
+msgid "Article about it: [Keyword Monitoring Tool: Track your competition in search results](https://medium.datadriveninvestor.com/keyword-monitoring-tool-track-your-competition-in-search-results-83db61f0a696)"
+msgstr ""
+
+#: dashboard.py:40
+msgid "It is NOT official app. We don't save this data anywhere, but if you want to feel safe, you can run the application on your own computer: [https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093](https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093) "
+msgstr ""
+
+#: dashboard.py:54
+msgid "Select search_engine domain"
+msgstr ""
+
+#: dashboard.py:59
+msgid "Advanced settings"
+msgstr ""
+
+#: dashboard.py:60
+msgid "The geolocation used in the query"
+msgstr ""
+
+#: dashboard.py:64
+msgid "Web Interface Language, autodetected from the search_engine if not supplied"
+msgstr ""
+
+#: dashboard.py:69
+msgid "Googles country code, autodetected from the search_engine if not supplied"
+msgstr ""
+
+#: dashboard.py:74
+msgid "Which device to use: desktop or mobile"
+msgstr ""
+
+#: dashboard.py:78
+msgid "Search Query"
+msgstr ""
+
+#: dashboard.py:80
+msgid "Show raw request"
+msgstr ""
+
+#: dashboard.py:83
+msgid "Settings"
+msgstr ""
+
+#: dashboard.py:84
+msgid "Select part of results page"
+msgstr ""
+
+#: dashboard.py:85
+msgid "Show raw results"
+msgstr ""
+
+#: dashboard.py:87
+msgid "table"
+msgstr ""
+
+#: dashboard.py:92
+msgid "🔍 Search"
+msgstr ""
+
