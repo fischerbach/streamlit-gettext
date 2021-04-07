@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import gettext
 _ = gettext.gettext
+from os import system, path
 
 from zenserp import Client
 
@@ -13,6 +14,23 @@ try:
   _ = localizator.gettext 
 except:
     pass
+
+POT = st.sidebar.button(_('POT generate'))
+MO = st.sidebar.button('MO generate')
+localazy_upload = st.sidebar.button('Localazy upload')
+localazy_download = st.sidebar.button('Localazy download')
+if POT:
+    system(f'cd {path.dirname(path.realpath(__file__))} & /Library/Frameworks/Python.framework/Versions/3.8/share/doc/python3.8/examples/Tools/i18n/pygettext.py -d base -o locales/base.pot dashboard.py')
+    system(f'cd {path.dirname(path.realpath(__file__))} & cp locales/base.pot locales/de/LC_MESSAGES/base.po && cp locales/base.pot locales/pl/LC_MESSAGES/base.po')
+
+if MO:
+    system(f'cd {path.dirname(path.realpath(__file__))} & msgfmt -o locales/de/LC_MESSAGES/base.mo locales/de/LC_MESSAGES/base & msgfmt -o locales/pl/LC_MESSAGES/base.mo locales/pl/LC_MESSAGES/base')
+
+if localazy_upload:
+    system(f'cd {path.dirname(path.realpath(__file__))} & localazy upload')
+
+if localazy_download:
+    system(f'cd {path.dirname(path.realpath(__file__))} & localazy download')
 
 apikey = st.sidebar.text_input(_('Enter API key'), type='password')
 

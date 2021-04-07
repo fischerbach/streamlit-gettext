@@ -1,93 +1,69 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR ORGANIZATION
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-04-06 08:57+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Localazy (https://localazy.com)\n"
+"Project-Id-Version: Keyword Icebreaker\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : ((n%10>=2 && n%10<=4) && ((n%100<12 || n%100>14))) ? 1 : 2;\n"
 
+msgid "🔍 Search"
+msgstr "🔍 Szukaj"
 
-#: dashboard.py:9
-msgid "Enter API key"
-msgstr "Podaj klucz API"
-
-#: dashboard.py:35
 msgid "## This app uses Zenserp API"
 msgstr "## Ta aplikacja używa Zenserp API"
 
-#: dashboard.py:36
-msgid "To use it, you must enter your own API key. Create account: [https://zenserp.com/](https://zenserp.com/)"
-msgstr ""
-
-#: dashboard.py:37
-msgid "Demo:"
-msgstr ""
-
-#: dashboard.py:39
-msgid "Article about it: [Keyword Monitoring Tool: Track your competition in search results](https://medium.datadriveninvestor.com/keyword-monitoring-tool-track-your-competition-in-search-results-83db61f0a696)"
-msgstr ""
-
-#: dashboard.py:40
-msgid "It is NOT official app. We don't save this data anywhere, but if you want to feel safe, you can run the application on your own computer: [https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093](https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093) "
-msgstr ""
-
-#: dashboard.py:54
-msgid "Select search_engine domain"
-msgstr ""
-
-#: dashboard.py:59
 msgid "Advanced settings"
-msgstr ""
+msgstr "Ustawienia zaawansowane"
 
-#: dashboard.py:60
-msgid "The geolocation used in the query"
-msgstr ""
+msgid "Article about it: [Keyword Monitoring Tool: Track your competition in search results](https://medium.datadriveninvestor.com/keyword-monitoring-tool-track-your-competition-in-search-results-83db61f0a696)"
+msgstr "Artykuł na ten temat: [Narzędzie monitorowania słów kluczowych: Śledź swoją konkurencję w wynikach wyszukiwania] (https://medium.datadriveninvestor.com/keyword-monitoring-tool-track-your-competition-in-search-results-83db61f0a696)"
 
-#: dashboard.py:64
-msgid "Web Interface Language, autodetected from the search_engine if not supplied"
-msgstr ""
+msgid "Demo:"
+msgstr "Demo:"
 
-#: dashboard.py:69
+msgid "Enter API key"
+msgstr "Wprowadź klucz API"
+
 msgid "Googles country code, autodetected from the search_engine if not supplied"
-msgstr ""
+msgstr "Kod kraju Googles, automatycznie wykrywany z search_engine, jeśli nie podano"
 
-#: dashboard.py:74
-msgid "Which device to use: desktop or mobile"
-msgstr ""
+msgid "It is NOT official app. We don't save this data anywhere, but if you want to feel safe, you can run the application on your own computer: [https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093](https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093) "
+msgstr "Nie jest to oficjalna aplikacja. Nigdzie nie zapisujemy tych danych, ale jeśli chcesz czuć się bezpiecznie, możesz uruchomić aplikację na swoim własnym komputerze: [https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093](https://gist.github.com/fischerbach/1c93e04884f00e424137d179bd2a5093) "
 
-#: dashboard.py:78
+msgid "POT generate"
+msgstr "Generowanie POT"
+
 msgid "Search Query"
-msgstr ""
+msgstr "Wyszukiwane hasło"
 
-#: dashboard.py:80
-msgid "Show raw request"
-msgstr ""
-
-#: dashboard.py:83
-msgid "Settings"
-msgstr ""
-
-#: dashboard.py:84
 msgid "Select part of results page"
-msgstr ""
+msgstr "Wybierz część strony wyników"
 
-#: dashboard.py:85
+msgid "Select search_engine domain"
+msgstr "Wybierz domenę search_engine"
+
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgid "Show raw request"
+msgstr "Pokaż surowe żądanie"
+
 msgid "Show raw results"
-msgstr ""
+msgstr "Pokaż surowe wyniki"
 
-#: dashboard.py:87
+msgid "The geolocation used in the query"
+msgstr "Geolokalizacja używana w zapytaniu"
+
+msgid "To use it, you must enter your own API key. Create account: [https://zenserp.com/](https://zenserp.com/)"
+msgstr "Aby z niej skorzystać, musisz wprowadzić własny klucz API. Utwórz konto: [https://zenserp.com/](https://zenserp.com/)"
+
+msgid "Web Interface Language, autodetected from the search_engine if not supplied"
+msgstr "Język interfejsu WWW, automatycznie wykrywany z search_engine, jeśli nie podano"
+
+msgid "Which device to use: desktop or mobile"
+msgstr "Które urządzenie użyć: desktop lub mobile"
+
 msgid "table"
-msgstr ""
-
-#: dashboard.py:92
-msgid "🔍 Search"
-msgstr ""
-
+msgstr "Tabela"

@@ -1,2 +1,4 @@
 venv
 .vscode
+locales/de/LC_MESSAGES/base.mo
+locales/pl/LC_MESSAGES/base.mo
